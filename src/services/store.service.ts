@@ -20,10 +20,6 @@ export class StoreService {
     return this.http.get<Product[]>(this.url);
   }
 
-  getProductsByCategory(category: string){
-    return this.http.get<Product[]>(`${this.url}/category/${category}`);
-  }
-
   getProductById(id: number){
     return this.http.get<Product[]>(`${this.url}/${id}`)
   }

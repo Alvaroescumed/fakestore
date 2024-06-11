@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './components/detail/detail.component';
+import { categoryFilterPipe } from './pipes/categoryfilter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TiendaComponent,
-    DetailComponent
+    DetailComponent,
+    categoryFilterPipe
   ],
   imports: [
     BrowserModule,

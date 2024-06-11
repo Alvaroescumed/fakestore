@@ -1,9 +1,9 @@
 <div class="list-container">
-    <div class="card-container" *ngFor="let item of products">
-        <h1>{{ item.title }}</h1>
-        <p>{{ item.price }}€</p>
-        <img src="{{ item['image'] }}">
-        <a [routerLink]="['/product', item.id]">Show more...</a>
+    <div class="card-container" *ngFor="let product of products | categoryFilter: category"> <!-- Usamos la pipe que hemos desarrollado para filtrar por categoria-->
+        <h1>{{ product.title }}</h1>
+        <p>{{ product.price }}€</p>
+        <img src="{{ product['image'] }}">
+        <a [routerLink]="['/product', product.id]">Show more...</a>
     </div>
 </div>
 

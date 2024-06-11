@@ -23,7 +23,7 @@ export class TiendaComponent implements OnInit{
   ngOnInit(){
     this.route.params.subscribe(params => {
       this.category = params['category'];
-      this._apiStore.getProductsByCategory(this.category).subscribe(
+      this._apiStore.getProducts().subscribe(
         (products: Product[]) => this.products = products
       );
     });
