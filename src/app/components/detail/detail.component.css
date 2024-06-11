@@ -1,7 +1,7 @@
-/* Estilos generales */
+
 .card-container {
-    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
-    margin: 0 auto; /* Centra el contenedor */
+    max-width: 600px; 
+    margin: 0 auto; 
     padding: 20px;
     border-radius: 5px;
     background-color: #ffffff;
@@ -16,22 +16,19 @@
     margin-top: 20px;
 }
 
-/* Estilos para el precio */
+
 .card-body h3 {
-    color: #007bff; /* Cambia el color según tu preferencia */
+    color: #007bff; 
 }
 
-/* Estilos para la descripción */
 .card-body p {
     color: #666;
 }
 
-/* Estilos para la categoría */
 .card-body h5 {
     color: #555;
 }
 
-/* Estilos para la imagen */
 .card-body img {
     display: block;
     max-width: 100%;

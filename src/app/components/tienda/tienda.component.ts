@@ -18,21 +18,15 @@ export class TiendaComponent implements OnInit{
     private route: ActivatedRoute
   ){ }
 
+
+  // llamamos a la peticion que nos trae los productos por categorias
   ngOnInit(){
     this.route.params.subscribe(params => {
       this.category = params['category'];
-      this.loadProducts();
-    });
-  }
-
-  loadProducts(){
-    if (this.category) {
       this._apiStore.getProductsByCategory(this.category).subscribe(
         (products: Product[]) => this.products = products
       );
-    } else {
-      this._apiStore.getProducts().subscribe(
-        (products: Product[]) => this.products = products
-      );}
+    });
   }
+
 }

@@ -19,17 +19,14 @@ export class DetailComponent implements OnInit{
     private route: ActivatedRoute
   ){ }
 
+  //traemos los detalles del producto usando su id como parametro para la petición
   ngOnInit(){
     this.route.params.subscribe(params => {
       this.id = params['id'];
-      this.loadProduct();
+      this._apiStore.getProductById(this.id).subscribe(
+        product => this.product = product
+      );
     });
-  }
-
-  loadProduct(){
-    this._apiStore.getProductById(this.id).subscribe(
-      product => this.product = product
-    );
   }
 
 }

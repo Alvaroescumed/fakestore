@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Product } from 'src/app/models/product.model';
-import { Observable } from 'rxjs';
 
+ 
 
 
 @Injectable({
@@ -15,16 +15,16 @@ export class StoreService {
 
   constructor(private http: HttpClient) { }
 
-  // creamos una funcion que nos haga la petición get a la API para que nos traiga los datos
-  getProducts(): Observable<Product[]>{
+  // creamos varias funciones para que nos traiga los datos de la API mediante las prticiones http
+  getProducts(){
     return this.http.get<Product[]>(this.url);
   }
 
-  getProductsByCategory(category: string): Observable<Product[]>{
+  getProductsByCategory(category: string){
     return this.http.get<Product[]>(`${this.url}/category/${category}`);
   }
 
-  getProductById(id: number): Observable<Product[]>{
+  getProductById(id: number){
     return this.http.get<Product[]>(`${this.url}/${id}`)
   }
 

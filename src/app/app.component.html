@@ -1,6 +1,7 @@
 <header>
     <nav>
         <ul>
+            <!-- recorremos las categorias  para crear un enlace en el nav para cada una -->
             <li *ngFor="let category of categories">
                 <a [routerLink]="['/store', category]">{{ category }}</a>
             </li>

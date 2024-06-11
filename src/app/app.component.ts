@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
 
   constructor(private _apiStore: StoreService){ }
 
+  // llamamos a la funcion del service de traer las categorias y las guardamos dentro de un array
   ngOnInit(){
     this._apiStore.getCategories().subscribe((data: any) => {
       this.categories = data;
